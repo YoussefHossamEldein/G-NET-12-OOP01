@@ -19,7 +19,7 @@
                     - parameterless constructor is always made by compiler
                     - better when working with small data
             */
-            Person p;
+            //Person p;
             //p = new();
             //p.Name = "ahmed";
             //Person p2 = new Person();
@@ -34,6 +34,22 @@
             //person2.Name = "Mohamed";
             //Console.WriteLine(person1.Name);//Mohamed
 
+
+
+            #endregion
+
+            #region Question02
+            #endregion
+
+            #region Question02
+            #endregion
+
+            #region Question04
+            /* class library is a separate project that contains reusable and frequently used classes
+             * but has no main method and can not run on its own and it contains a .dll file */
+            /* we use class librarires for organization , team work and reusability. you can think 
+             * of it as a toolbox that contain tools (classes) you take this toolbox for each 
+             * job(project) */
             #endregion
         }
     }
