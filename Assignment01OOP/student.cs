@@ -8,6 +8,8 @@ namespace Assignment01OOP
 {
     internal class Student
     {
+        public int age;
+        private int Age2;
         public string? Name { get; set; }
     }
 }

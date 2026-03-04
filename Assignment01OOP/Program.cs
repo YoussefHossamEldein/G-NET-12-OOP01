@@ -1,4 +1,6 @@
-﻿namespace Assignment01OOP
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Assignment01OOP
 {
     internal class Program
     {
@@ -39,6 +41,12 @@
             #endregion
 
             #region Question02
+            /* if we make a private field inside a class we can not access it 
+             * but if we have another field inside the same class with public access modifier
+             * now we can see and access it */
+            //Student student01 = new Student();
+            //student01.age = 20;
+            //student01.age2;  //error
             #endregion
 
             #region Question03
