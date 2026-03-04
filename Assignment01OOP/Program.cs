@@ -41,7 +41,13 @@
             #region Question02
             #endregion
 
-            #region Question02
+            #region Question03
+            /* create a new project and we choose class library not console application 
+             * we have to make sure that our classes are public not internal
+             * now we have to build this library to generate the .dll file 
+             * we go to the project that we need to use this library in and on the dependencies 
+               we right click and choose add project reference and then choose the .dll file of library
+            */
             #endregion
 
             #region Question04
