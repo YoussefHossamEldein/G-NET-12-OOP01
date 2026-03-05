@@ -65,6 +65,55 @@ namespace Assignment01OOP
              * of it as a toolbox that contain tools (classes) you take this toolbox for each 
              * job(project) */
             #endregion
+
+            #region part02
+            string movie;
+            bool isParsed;
+            char seatRow;
+            int seatNumber;
+            double price = 50;
+            double Discount;
+            TicketType ticketType;
+            Ticket ticket = new Ticket();
+            Console.Write("Enter Movie Name : ");
+            ticket.MovieName = Console.ReadLine();
+            do
+            {
+                Console.Write("Enter Ticket Type : ");
+                isParsed = Enum.TryParse<TicketType>(Console.ReadLine(), true, out ticketType);
+            } while (!isParsed || !Enum.IsDefined(typeof(TicketType),ticketType));
+            ticket.Type = ticketType;
+            do
+            {
+                Console.Write("Enter Seat Row (A,B, C...): ");
+                isParsed = char.TryParse(Console.ReadLine(), out seatRow);
+            } while (!isParsed);
+            seatRow = char.ToUpper(seatRow);
+            do
+            {
+                Console.Write("Enter Seat Number: ");
+                isParsed = int.TryParse(Console.ReadLine(), out seatNumber);
+            } while (!isParsed);
+
+            Seat seatLocation = new Seat(seatRow, seatNumber);
+            ticket.Seat = seatLocation;
+            while(!isParsed)
+            {
+                Console.Write("Enter Price: ");
+                isParsed = double.TryParse(Console.ReadLine(), out price);
+            }
+            ticket.SetPrice(price);
+            do
+            {
+                Console.Write("Enter Discount Amount: ");
+                isParsed = double.TryParse(Console.ReadLine(), out Discount);
+            } while (!isParsed);
+            ticket.CalcTotal(14);
+            ticket.ApplyDiscount(Discount);
+          ticket.PrintTicket();
+
+
+            #endregion
         }
     }
 }
